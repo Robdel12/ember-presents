@@ -4,8 +4,8 @@ export default {
   name: 'add-presentation-routes',
   initialize: function() {
     Router.map(function() {
-      this.resource('presentation', {path: '/'}, function () {
-        this.resource('slide', {path: '/:id'});
+      this.route('presentation', {path: '/', resetNamespace: true}, function () {
+        this.route('slide', {path: '/:id', resetNamespace: true});
       });
     });
   }
