@@ -29,6 +29,11 @@ export default Ember.Route.extend({
   activate() {
     $(window).on('keyup.SlideRoute', (e)=> {
       switch (e.keyCode) {
+      case 33:
+        this.move(-1); //Page down (presenter remote)
+        break;
+      case 34:
+        this.move(1); //Page up (presenter remote)
       case 37:
         this.move(-1);
         break;
